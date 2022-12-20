@@ -1,1 +1,1 @@
-Project for Dr. Ishani Patel, ND website ().
+Project for Dr. Ishani Patel website.
