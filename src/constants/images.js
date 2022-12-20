@@ -1,9 +1,9 @@
 import logo from "../assets/logo.png";
-import ishaniPatel from "../assets/ishaniPatel.png";
+import portrait from "../assets/ishaniPatel.png";
 
 const images = {
   logo,
-  ishaniPatel,
+  portrait,
 };
 
 export default images;
