@@ -17,14 +17,14 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
         className="app__header-info"
       >
         <div className="app__header-badge">
-          <div className="badge-camp app__flex">
+          <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
@@ -43,7 +43,7 @@ const Header = () => {
         transition={{ duration: 1, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.portrait} alt="profile-bg" />
+        <img src={images.portraitNoBg} alt="profile-bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -58,11 +58,13 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.leafHeart].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`cirle-${index}`}>
-            <img src={circle} alt="profile-bg" />
-          </div>
-        ))}
+        {[images.leafHeart, images.eatRight, images.handHolding].map(
+          (circle, index) => (
+            <div className="circle-cmp app__flex" key={`cirle-${index}`}>
+              <img src={circle} alt="profile-bg" />
+            </div>
+          )
+        )}
       </motion.div>
     </div>
   );
