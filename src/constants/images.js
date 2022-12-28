@@ -5,6 +5,8 @@ import circle from "../assets/circle.svg";
 import leafHeart from "../assets/leafHeart.png";
 import eatRight from "../assets/eatRight.png";
 import handHolding from "../assets/handHolding.png";
+import emailIcon from "../assets/email_icon.png";
+import phoneIcon from "../assets/phone_icon.png";
 
 const images = {
   logo,
@@ -14,6 +16,8 @@ const images = {
   leafHeart,
   eatRight,
   handHolding,
+  emailIcon,
+  phoneIcon,
 };
 
 export default images;
