@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { MdEmail, MdPhone } from "react-icons/md";
 
-import { images } from "../../constants";
+//import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 
 import "./Footer.scss";
+import { IconContext } from "react-icons/lib";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -46,13 +48,33 @@ const Footer = () => {
       <h2 className="head-text">Get in Touch</h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
-          <img src={images.emailIcon} alt="email" />
+          <IconContext.Provider
+            value={{
+              style: {
+                fontSize: "250%",
+                color: "#030343",
+                paddingRight: "10px",
+              },
+            }}
+          >
+            <MdEmail />
+          </IconContext.Provider>
           <a href="mailto:ishanipatelnd@gmail.com" className="p-text">
             ishanipatelnd@gmail.com
           </a>
         </div>
         <div className="app__footer-card">
-          <img src={images.phoneIcon} alt="mobile" />
+          <IconContext.Provider
+            value={{
+              style: {
+                fontSize: "250%",
+                color: "#030343",
+                paddingRight: "10px",
+              },
+            }}
+          >
+            <MdPhone />
+          </IconContext.Provider>
           <a href="tel:+1 (416) 417-1898" className="p-text">
             +1 (416) 417-1898
           </a>
@@ -86,6 +108,7 @@ const Footer = () => {
               name="phone"
               value={phone}
               onChange={handleChangeInput}
+              x
             />
           </div>
           <div>
